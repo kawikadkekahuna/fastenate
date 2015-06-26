@@ -1,5 +1,277 @@
-body {
-  h1 {
-    background-color: #fff;
+//Variables
+@import "partials/reset";
+
+$borderDark:#3A3A3C;
+$borderGrey:#717275;
+$lightGrey:#AFB1B4;
+$pGrey: #4F4F51;
+$border: #3A3A3C;
+$navHover: #D86438;
+$blockHover:#F1592A;
+
+
+$medium: "only screen and (min-width: 850px)";
+$footer: "only screen and (min-width: 1024px)";
+
+
+div.header{
+  
+  position:relative;
+  background-color: white;
+  background-image:url("/assets/logo.svg");
+  background-repeat:no-repeat;
+  background-color:white;
+  height:60px;
+  width:100%;
+  
+  @media #{$medium}{
+  background-image:url("/assets/logo.svg"),url("/assets/header_bg.svg");
+  background-position:center;
+  }
+
+  div.logo{
+
+    position:absolute;
+    background-color:transparent;
+    border:2px solid orange;
+    right:10px;
+    width:30px;
+    height:30px;
+    top:15px;
+
+    a.plus{
+      position:absolute;
+      text-decoration:none;
+      left:3px;
+      top:-2px;
+      color:red;
+      background-color:transparent;
+      font-size:30px;
+      font-weight:bold;
+    }
+
+  }    
+}
+
+nav.nav{
+  
+  height:45px;
+  background-color: $borderDark;
+
+
+  ul{
+    @media #{$medium}{
+      text-align: center;
+    }
+  }
+
+  li:nth-child(2){
+   border-left:1px solid white;
+   border-right:1px solid white;
+    @media #{$medium}{
+      border-left:0px;
+      border-right:0px;    
+    }  
+  }
+
+  }
+
+  li{
+  font-family: 'Lato', sans-serif;
+  position:relative;
+  display:inline;
+  float:left;
+  width:33%;
+  list-style-type: none;
+  height:45px;
+  border:1px;
+  text-align: center;
+
+
+
+  @media #{$medium}{
+    &:first-child{
+    &:before{
+      display: none;
+      }
+    }
+    &:before{
+      content: " ";
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      background-color: #888;
+      position: relative;
+      margin-right: 7px;
+      border-radius: 100%;
+      box-sizing:border-box;
+      top: -2px;
+      }
+    float:none;
+    }
+
+    a{
+      padding-top:20px;
+      text-decoration: none;
+      color:$borderGrey;
+      font-weight: bold;
+      font-size:15px;
+      height:140px;
+      position:relative;
+      line-height: 40px; 
+
+      &:hover{
+        color:$navHover;
+      }
+    }
+
+  }
+
+div.holder{
+  background-image:url('/assets/bg.jpg');
+}
+
+div.holder div.infoContainer{
+
+  @media #{$medium}{
+  max-width:782px;
+  margin:auto;
   }
 }
+
+
+
+div.holder div.infoContainer div.infoBlock{
+
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+    background-color:white;
+    padding: 40px;
+    max-width:450px;
+    height:450px;
+
+  div.image1{
+    height:250px;
+    width:100%;
+    margin:auto;
+    background-image:url('http://placekitten.com/410/250');
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-bottom:10px;
+
+    @media #{$medium}{
+      height:169px;
+    }
+  }
+
+  div.image2{
+
+    height:250px;
+    width:100%;
+    margin:auto;
+    background-repeat:no-repeat;
+    background-image:url('http://placekitten.com/410/250');
+    background-size:cover;
+    margin-bottom:10px;
+    @media #{$medium}{
+      height:169px;
+    }
+  }
+
+  div.image3{
+    position:relative;
+    height:250px;
+    width:100%;
+    margin:auto;
+    background-image:url('http://placekitten.com/410/250');
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-bottom:10px;
+    @media #{$medium}{
+      height:169px;
+    }
+  }
+
+
+  div.image4{
+    position:relative;
+    height:250px;
+    width:100%;
+    margin:auto;
+    background-image:url('http://placekitten.com/410/250');
+    background-repeat:no-repeat;
+    background-size:cover;
+    margin-bottom:10px;
+    @media #{$medium}{
+      height:169px;
+    }
+  }
+   h3{
+      font-family: 'Oswald', sans-serif;
+      border-left:20px solid white;
+      font-size:20px;
+    }
+
+    h4{
+      font-family: 'Oswald', sans-serif;
+      border-top:10px solid white;
+      border-left:20px solid white;
+      font-size:17px;
+      color:$lightGrey;
+    }
+
+    p{
+      font-family: 'Oswald', sans-serif;
+      border-top:20px solid white;
+      border-left:20px solid white;
+      font-size:17px;
+      color:$pGrey;
+      border-bottom:10px;
+    }
+
+    @media #{$medium}{
+      float:left;
+      box-sizing:border-box;
+      width:46%;
+      margin:3% 2%;
+    }
+
+  }
+
+
+
+footer.foot{
+  height:44px;
+  width:100%;
+  background-color:$border;
+  .iconHolder{
+    padding-top:10px;
+    margin:auto;
+    width:50px;
+
+    .instagram{
+      background-image:url('../assets/instagram_grey.svg');
+      float:right;
+      height:24px;
+      width:24px;
+
+      &:hover{
+        background-image:url('../assets/instagram_orange.svg');
+      }
+    }
+
+    .facebook{
+      background-image:url('../assets/facebook_grey.svg');
+      background-repeat:no-repeat;
+      float:left;
+      height:24px;
+      width:24px;
+
+    }
+  }
+}
+
+
+
+

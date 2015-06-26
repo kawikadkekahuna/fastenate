@@ -1,2 +1,241 @@
-body h1 {
-  background-color: #fff; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* End hide from IE-mac */
+div.header {
+  position: relative;
+  background-color: white;
+  background-image: url("/assets/logo.svg");
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 60px;
+  width: 100%; }
+  @media only screen and (min-width: 850px) {
+    div.header {
+      background-image: url("/assets/logo.svg"), url("/assets/header_bg.svg");
+      background-position: center; } }
+  div.header div.logo {
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid orange;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    top: 15px; }
+    div.header div.logo a.plus {
+      position: absolute;
+      text-decoration: none;
+      left: 3px;
+      top: -2px;
+      color: red;
+      background-color: transparent;
+      font-size: 30px;
+      font-weight: bold; }
+
+nav.nav {
+  height: 45px;
+  background-color: #3A3A3C; }
+  @media only screen and (min-width: 850px) {
+    nav.nav ul {
+      text-align: center; } }
+  nav.nav li:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white; }
+    @media only screen and (min-width: 850px) {
+      nav.nav li:nth-child(2) {
+        border-left: 0px;
+        border-right: 0px; } }
+
+li {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  display: inline;
+  float: left;
+  width: 33%;
+  list-style-type: none;
+  height: 45px;
+  border: 1px;
+  text-align: center; }
+  @media only screen and (min-width: 850px) {
+    li {
+      float: none; }
+      li:first-child:before {
+        display: none; }
+      li:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        background-color: #888;
+        position: relative;
+        margin-right: 7px;
+        border-radius: 100%;
+        box-sizing: border-box;
+        top: -2px; } }
+  li a {
+    padding-top: 20px;
+    text-decoration: none;
+    color: #717275;
+    font-weight: bold;
+    font-size: 15px;
+    height: 140px;
+    position: relative;
+    line-height: 40px; }
+    li a:hover {
+      color: #D86438; }
+
+div.holder {
+  background-image: url('/assets/bg.jpg'); }
+
+@media only screen and (min-width: 850px) {
+  div.holder div.infoContainer {
+    max-width: 782px;
+    margin: auto; } }
+
+div.holder div.infoContainer div.infoBlock {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  background-color: white;
+  padding: 40px;
+  max-width: 450px;
+  height: 450px; }
+  div.holder div.infoContainer div.infoBlock div.image1 {
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    background-image: url('http://placekitten.com/410/250');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 850px) {
+      div.holder div.infoContainer div.infoBlock div.image1 {
+        height: 169px; } }
+  div.holder div.infoContainer div.infoBlock div.image2 {
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-image: url('http://placekitten.com/410/250');
+    background-size: cover;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 850px) {
+      div.holder div.infoContainer div.infoBlock div.image2 {
+        height: 169px; } }
+  div.holder div.infoContainer div.infoBlock div.image3 {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    background-image: url('http://placekitten.com/410/250');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 850px) {
+      div.holder div.infoContainer div.infoBlock div.image3 {
+        height: 169px; } }
+  div.holder div.infoContainer div.infoBlock div.image4 {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    background-image: url('http://placekitten.com/410/250');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px; }
+    @media only screen and (min-width: 850px) {
+      div.holder div.infoContainer div.infoBlock div.image4 {
+        height: 169px; } }
+  div.holder div.infoContainer div.infoBlock h3 {
+    font-family: 'Oswald', sans-serif;
+    border-left: 20px solid white;
+    font-size: 20px; }
+  div.holder div.infoContainer div.infoBlock h4 {
+    font-family: 'Oswald', sans-serif;
+    border-top: 10px solid white;
+    border-left: 20px solid white;
+    font-size: 17px;
+    color: #AFB1B4; }
+  div.holder div.infoContainer div.infoBlock p {
+    font-family: 'Oswald', sans-serif;
+    border-top: 20px solid white;
+    border-left: 20px solid white;
+    font-size: 17px;
+    color: #4F4F51;
+    border-bottom: 10px; }
+  @media only screen and (min-width: 850px) {
+    div.holder div.infoContainer div.infoBlock {
+      float: left;
+      box-sizing: border-box;
+      width: 46%;
+      margin: 3% 2%; } }
+
+footer.foot {
+  height: 44px;
+  width: 100%;
+  background-color: #3A3A3C; }
+  footer.foot .iconHolder {
+    padding-top: 10px;
+    margin: auto;
+    width: 50px; }
+    footer.foot .iconHolder .instagram {
+      background-image: url('../assets/instagram_grey.svg');
+      float: right;
+      height: 24px;
+      width: 24px; }
+      footer.foot .iconHolder .instagram:hover {
+        background-image: url('../assets/instagram_orange.svg'); }
+    footer.foot .iconHolder .facebook {
+      background-image: url('../assets/facebook_grey.svg');
+      background-repeat: no-repeat;
+      float: left;
+      height: 24px;
+      width: 24px; }
